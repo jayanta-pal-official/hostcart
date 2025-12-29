@@ -1,14 +1,26 @@
-version: "3.8"
+version: "3.9"
 
 services:
   backend:
     build: ./backend
+    container_name: hostcart_backend
+
     ports:
       - "3000:3000"
+    volumes:
+      - ./backend:/app
+    restart: unless-stopped
+
+
 
   frontend:
     build: ./frontend
+    container_name: hostcart_frontend
     ports:
-      - "80:80"
+      - "5173:3000"
+    volumes:
+      - ./frontend:/app
     depends_on:
       - backend
+    restart: unless-stopped
+
