@@ -1,4 +1,3 @@
-version: "3.9"
 
 services:
   backend:
@@ -17,7 +16,7 @@ services:
     build: ./frontend
     container_name: hostcart_frontend
     ports:
-      - "5173:3000"
+      - "5173:5173"
     volumes:
       - ./frontend:/app
     depends_on:
