@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
   res.send("Backend API is running 🚀");
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'Backend working' })
+})
+
 // app.use("/api", userRoutes);
 // app.use("/api", authRoutes);
 
