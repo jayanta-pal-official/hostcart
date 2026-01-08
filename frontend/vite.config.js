@@ -8,7 +8,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
   build: {
-    outDir: '/www/wwwroot/dev.hostcart.net',
+    outDir: 'dist',
     emptyOutDir: true
   },
   resolve: {
